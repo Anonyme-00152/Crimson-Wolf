@@ -109,6 +109,20 @@ It includes many utilities related to **Discord tokens, webhooks, and bots**, al
 
 # Page 4/5 - Coming Soon
 - Comming Soon (x15)
+1. Download the .zip folder.
+2. Unzip the folder.
+3. Run the main program (example: "Setup.py").
+4. Enjoy learning and experimenting!
 
+Or via Git:
+
+
+Copier le code
+1. Open a terminal.
+2. Type: git clone https://github.com/Anonyme-00152/Crimson-Wolf.git
+3. Type: cd Crimson-Wolf
+4. Type: git pull
+5. Run the main program (example: python Setup.py)
+6. Enjoy learning!
 # Page 5/5 - Coming Soon
 - Comming Soon (x15)
