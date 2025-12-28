@@ -1,0 +1,4 @@
+PyQt5
+keyboard
+pyinstaller
+pip install PyQt5 pyautogui requests
