@@ -1,141 +1,128 @@
-<!-- <div align="center">
+<div align="center">
 
-# <img src="Programs/Images/BuildwareLogo.png" width="6%"> Buildware-Tool <img src="Programs/Images/BuildwareLogo.png" width="6%">
+# 🐺 Crimson-Wolf
 
-<p>
-  <strong>All-in-one Discord utility suite for tokens, webhooks & bots</strong>
-</p>
+<strong>All-in-one Discord utility suite for tokens, webhooks & bots</strong>
 
 <p>
-<img src="https://img.shields.io/github/release/v4lkyr0/Buildware-Tool?label=Version&color=a80505">
-<img src="https://img.shields.io/github/stars/v4lkyr0/Buildware-Tool?style=flat&label=Stars&color=a80505">
-<img src="https://img.shields.io/github/repo-size/v4lkyr0/Buildware-Tool?label=Size&color=a80505">
+  <img src="https://img.shields.io/github/stars/Anonyme-00152/Crimson-Wolf?label=Stars&color=8b0000">
+  <img src="https://img.shields.io/github/repo-size/Anonyme-00152/Crimson-Wolf?label=Size&color=8b0000">
 </p>
 
-<img src="Programs/Images/BuildwareTool.png">
+<img src="Programs/Images/CrimsonWolf.png">
 
 </div>
 
-<br>
+---
+
+## ⚠️ Warning
+
+**DO NOT** download Crimson-Wolf from unofficial sources.  
+**Only use** this official GitHub repository to avoid malware, backdoors, or modified versions.
 
 ---
 
-## Warning
+## 📌 About
 
-**DO NOT** download Buildware-Tool from unofficial sources. **Only use** this official Github repository to avoid malware, scams, or compromised versions. 
+**Crimson-Wolf** is a Discord API tool created for **educational and research purposes**.  
+It includes many utilities related to **Discord tokens, webhooks, and bots**, all centralized in one tool.
 
-<br>
-
----
-
-## About
-
-**Buildware-Tool** is a Discord API Tool created by **myself (v4lkyr0)**. It comes with many features for **tokens, webhooks, bots**, and more. **All in one place**! The tool works on **Windows & Linux**, and you don't have to worry about **malware or any other bad stuff**. Buildware-Tool will be **updated regularly**, so stay tuned and **enjoy**! :D
-
-<br>
+- Compatible with **Windows & Linux**
+- **No malware**
+- Frequently updated
+- Simple and powerful interface
 
 ---
 
-## Features
+## ✨ Features
 
 ```yaml
-- Changelog        : Displays the change history.
-- Exit Buildware   : Exits the tool.
-- Tool Information : Displays information about the tool.
-- Tokens File      : Open the tokens file.
-```
+- Changelog        : View tool updates
+- Exit Tool        : Close Crimson-Wolf
+- Tool Info        : Display tool information
+- Tokens File      : Open stored tokens
+# Page 1/5 - OSINT Tools
+- Username-Search
+- Discord-Id-Info
+- OSINT-Menu-Full
+- OSINT-DNS-Lookup
+- OSINT-Subdomains-Finder
+- OSINT-Leakcheck-Searcher
+- Leak-Search-Bot
+- Comming Soon
+- OSINT-GitHub-Info-Searcher
+- OSINT-All-Websites
+- OSINT-GitHub-Email-Finder
+- OSINT-Phone-Lookup-CS
+- OSINT-WHOIS-Lookup-CS
+- OSINT-Email-Verifier-CS
+- OSINT-Email-Breach-Checker-CS
 
-```yaml
-- Discord Token Information      : Displays sensitive information about a token.
-- Discord Token Login            : Log in to Discord using a token.
-- Discord Token Onliner          : Set a token's status to online.
-- Discord Token Generator        : Generates random token.
-- Discord Token Disabler         : Disables a token.
-- Discord Token Bio Changer      : Changes the account's bio.
-- Discord Token Alias Changer    : Changes the account's display name.
-- Discord Token CStatus Changer  : Changes the custom status of the account.
-- Discord Token Pfp Changer      : Changes the account's profile picture.
-- Discord Token Language Changer : Changes the Discord interface language.
-- Discord Token House Changer    : Changes the HypeSquad house of the account.
-- Discord Token Theme Changer    : Changes Discord’s theme.
-- Discord Token Joiner           : Makes a token join a server.
-- Discord Token Leaver           : Makes a token leave a server.
-- Discord Server Information     : Shows detailed information about a server.
-- Discord Token Nuker            : Performs destructive actions on the account.
-- Discord Token Delete Friends   : Deletes all friends from the account.
-- Discord Token Block Friends    : Blocks all friends from the account.
-- Discord Token Unblock Users    : Unblocks all blocked users.
-- Discord Token Spammer          : Sends mass messages in a channel.
-- Discord Token Mass Dm          : Sends mass private messages.
-- Discord Token Delete Dm        : Deletes all private messages.
-- Discord Id To Token            : Tries to brute force from a user ID.
-- Discord Snowflake Decoder      : Decodes a Discord ID.
-- Discord Bot Id To Invite       : Gets an invitation link from a bot's ID.
-- Discord Webhook Information    : Shows information about a webhook.
-- Discord Webhook Generator      : Generates webhooks.
-- Discord Webhook Spammer        : Spams a webhook with messages.
-- Discord Webhook Deleter        : Deletes a webhook.
-- Discord Nitro Generator        : Generate random Discord Nitro codes.
-```
+# Page 2/5 - Discord Tools
+- Discord Token Information
+- Discord Token Login
+- Discord Token Onliner
+- Discord Token Generator
+- Discord Token Disabler
+- Discord Token Bio Changer
+- Discord Token Alias Changer
+- Discord Token Custom Status Changer
+- Discord Token Profile Picture Changer
+- Discord Token Language Changer
+- Discord Token HypeSquad Changer
+- Discord Token Theme Changer
+- Discord Token Server Joiner
+- Discord Token Server Leaver
+- Discord Server Information
+- Discord Token Nuker
+- Discord Token Delete Friends
+- Discord Token Block Friends
+- Discord Token Unblock Users
+- Discord Token Spammer
+- Discord Token Mass DM
+- Discord Token Delete DMs
+- Discord ID to Token (Bruteforce)
+- Discord Snowflake Decoder
+- Discord Bot ID to Invite
+- Discord Webhook Information
+- Discord Webhook Generator
+- Discord Webhook Spammer
+- Discord Webhook Deleter
+- Discord Nitro Generator
 
-<br>
+# Page 3/5 - Mixed Tools
+- OSINT-Instagram-Lookup
+- OSINT-IP-Informations-metrew
+- Screen-Locker-Builder
+- Simple-Username-Search AM
+- Discord-Statut-Rotator
+- OSINT-Genderize-IO-CS
+- Discord-Server-Information
+- Search-Database
+- Steganography Tool
+- Social Media Account Finder
+- Image-Metadata/Exif-Extr
+- Virus Generator
+- Comming Soon
+- Comming Soon
+- Comming Soon
 
----
-
-## Installation
-
-[Download the latest Buildware-Tool version here](https://github.com/v4lkyr0/Buildware-Tool/archive/refs/heads/Buildware-Tool.zip)
-
-<p>
-
-```
+# Page 4/5 - Coming Soon
+- Comming Soon (x15)
 1. Download the .zip folder.
 2. Unzip the folder.
-3. Run "Setup.py".
-4. Enjoy!
-```
-**Or via Git:**
-```
+3. Run the main program (example: "Setup.py").
+4. Enjoy learning and experimenting!
+
+Or via Git:
+
+
+Copier le code
 1. Open a terminal.
-2. Type: git clone https://github.com/v4lkyr0/Buildware-Tool.git
-3. Type: cd Buildware-Tool
+2. Type: git clone https://github.com/Anonyme-00152/Crimson-Wolf.git
+3. Type: cd Crimson-Wolf
 4. Type: git pull
-5. Type: "python Setup.py" or "python3 Setup.py"
-6. Enjoy!
-```
-
-<br>
-
----
-
-## Requirements
-
-- **Python 3.8 or higher.**
-- **Windows or Linux OS.**
-- **Internet connection.**
-
-<br>
-
----
-
-## Donation
-
-```yaml
-- Ethereum : 0xef1d65ff652e9087ebd7af400122caebb35fdf2b
-- Solana   : EqVkGSpgj2DZHN9wkKqzG9zTTiaQmMpkSuLeBynqLzbj
-```
-
-<br>
-
----
-
-## Disclaimer
-
-> **Buildware-Tool is strictly for educational & security research purposes.**
->
-> - Use this tool **only on your own** token, bots, and servers.
-> - Any malicious or unauthorized use is **prohibited & illegal**.
-> - Using this tool may **violate Discord's Terms of Service**.
-
-> - I am **not responsible** for misuse.
- -->
+5. Run the main program (example: python Setup.py)
+6. Enjoy learning!
+# Page 5/5 - Coming Soon
+- Comming Soon (x15)
